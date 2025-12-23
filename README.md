@@ -22,6 +22,7 @@ Based on [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
 ```bash
 git clone https://github.com/MarsWang42/mars.nvim.git ~/.config/mars.nvim
 cd ~/.config/mars.nvim
+chmod +x install.sh
 ./install.sh
 ```
 
